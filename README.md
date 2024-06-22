@@ -2,7 +2,7 @@
 
 **FRAMEWORK BY Three Amigos Modding AND COMMAND BY Marfia Studios**
 
-Improved radio anims and Command
+Improved radio anims and command
 
 Command: /radioanimation [chest, shoulder, handheld]
 
