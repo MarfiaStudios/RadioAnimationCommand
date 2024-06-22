@@ -1,5 +1,4 @@
 --[[------------------------------------------------------
-----       For Support - discord.gg/threeamigos       ----
 ---- Do not edit if you do not know what you"re doing ----
 --]]------------------------------------------------------
 
@@ -11,21 +10,13 @@ use_experimental_fxv2_oal "yes"
 author "Marfia Studioa"
 version "1.0.0"
 license "GPL-v3"
-name "TAM_BetterRadioAnims"
+name "Radio Animation Command"
 description "Marfia Studios - Radio Animation Command"
 repository "https://github.com/MarfiaStudios/RadioAnimationCommand"
 
 client_debug_mode "false"
 server_debug_mode "false"
 experimental_features_enabled "0"
-
-dependencies {
-	"ox_lib",
-}
-
-shared_scripts {
-	"@ox_lib/init.lua"
-}
 
 client_script "client/main.lua"
 
