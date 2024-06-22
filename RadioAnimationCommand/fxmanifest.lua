@@ -8,11 +8,12 @@ lua54 "yes"
 fx_version "cerulean"
 use_experimental_fxv2_oal "yes"
 
-author "Marfia Studios"
+author "Marfia Studioa"
 version "1.0.0"
 license "GPL-v3"
-name "RadioAnimationCommand"
-description "Three Amigos Modding - Better Radio Animations | Marfia Studios Radio Animation Command"
+name "TAM_BetterRadioAnims"
+description "Marfia Studios - Radio Animation Command"
+repository "https://github.com/MarfiaStudios/RadioAnimationCommand"
 
 client_debug_mode "false"
 server_debug_mode "false"
@@ -27,6 +28,8 @@ shared_scripts {
 }
 
 client_script "client/main.lua"
+
+export "animation"
 
 escrow_ignore {
 	"client/*.lua",
