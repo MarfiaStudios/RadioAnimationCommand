@@ -4,6 +4,8 @@
 
 Improved radio anims and Command
 
+Command: /radioanimation [chest, shoulder, handheld]
+
 ## Installation
 
 Add ``setr voice_enableRadioAnim 0`` to your server.cfg 
