@@ -16,8 +16,6 @@ Works for sonoran radio and any PMA voice radio
 
 Download the release of [NativeUILua](https://github.com/FrazzIe/NativeUILua) and add it to your server
 
-Download the release of [ox_lib](https://github.com/overextended/ox_lib) from  & add it to your server.cfg or resources.cfg **BEFORE** `RadioAnimationCommand`
-
 Add `ensure RadioAnimationCommand` to your server or resources cfg file
 
 Download [animations](https://www.gta5-mods.com/misc/leo-custom-anim) and add to stream folder
