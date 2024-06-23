@@ -1,20 +1,10 @@
----- YOU MUST READ "READMEFORSONORANRADIO.txt" IF USING SONORAN RADIO!!!!!!!
-
-
----- CONFIG
-
-local basicanim = "shoulder" ---- this is the animation that is used when the player does not set their animation
----- options are: shoulder, chest, or handheld
-
----- Do not edit if you do not know what you"re doing ----
-
 function ShowNotification(text)
     SetNotificationTextEntry("STRING")
     AddTextComponentString(text)
     DrawNotification(false, false)
 end
 
-local animation = basicanim
+local animation = "shoulder"
 
 RegisterCommand("radioanimation", function(src, args, raw)
 
@@ -39,10 +29,8 @@ TriggerEvent('chat:addSuggestion', '/radioanimation', 'Change the radio animatio
 })
 
 local function handleRadioAnim(enable)
-    local ped = cache.ped
-    local veh = cache.vehicle
-    local isAiming = IsPlayerFreeAiming(cache.playerId)
-    local vehClass = GetVehicleClass(veh)
+local ped = PlayerPedId()
+local veh = GetVehiclePedIsIn(ped, false)
 
     if not DoesEntityExist(ped) or IsEntityDead(ped) or IsPauseMenuActive() then return end
 
@@ -66,11 +54,6 @@ local function handleRadioAnim(enable)
    exports["rpemotes"]:EmoteCancel()
 end
 
-    AddEventHandler("pma-voice:radioActive", function(radioTalking)
-        handleRadioAnim(radioTalking)
-    end)
-
-    
 local an = false
 
 function g(arg)
@@ -82,5 +65,10 @@ handleRadioAnim(an)
 end
 
 exports('animation', g)
+
+    AddEventHandler("pma-voice:radioActive", function(radioTalking)
+        handleRadioAnim(radioTalking)
+    end)
+
 
     
